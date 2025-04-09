@@ -32,6 +32,11 @@ python train.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pi
 For CPU-
 python train.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pix2pix --direction AtoB --batch_size 4 --gpu_ids -1
 
+Step 6- For Testing run-->
+python test.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pix2pix --direction AtoB --phase test --num_test 50
+.It will provide output at ./results/ghibli_pix2pix/test_latest/images/
+
+
 
 
 
