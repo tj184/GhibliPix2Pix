@@ -38,6 +38,10 @@ python test.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pix
 
 
 
+***** Due to computation limitations, the model is trained a on very low number of epochs, but by default it will train on 200 epochs which is good enough for this task. *****
+
+
+
 
 
 
