@@ -1,0 +1,38 @@
+dataset link - https://www.kaggle.com/datasets/labledata/ghibli-dataset/data
+
+Step 1- Process the initial data and create dataset for model training using data_processing.py as-->
+processed/
+├── train/
+│   ├── 1.jpg
+│   ├── 2.jpg
+│   └── ...
+├── test/
+│   ├── 101.jpg
+│   ├── 102.jpg
+│   └── ...
+
+Step 2- AS the dataset is ready, clone the repo and run commands at terminal-  git clone https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+                                                                               cd pytorch-CycleGAN-and-pix2pix
+                                                                               pip install -r requirements.txt
+Step 3 - Organise data as below inside the folder pytorch-CycleGAN-and-pix2pix/
+├── datasets/
+│   └── ghibliify/
+│       ├── train/
+│       │   ├── 1.jpg
+│       │   └── ...
+│       └── test/
+│           ├── 101.jpg
+│           └── ...
+
+Step 4 - Start the visdom server by running python -m visdom.server on cmd.
+
+Step 5- Run the command to start training the model
+For GPU-
+python train.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pix2pix --direction AtoB --batch_size 4 --gpu_ids 0
+For CPU-
+python train.py --dataroot ./datasets/ghibliify --name ghibli_pix2pix --model pix2pix --direction AtoB --batch_size 4 --gpu_ids -1
+
+
+
+
+
